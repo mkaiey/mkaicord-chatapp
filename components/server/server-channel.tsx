@@ -1,8 +1,8 @@
 "use client";
 
-import {
-  Channel,
-  ChannelType,
+import { 
+  Channel, 
+  ChannelType, 
   MemberRole,
   Server
 } from "@prisma/client";

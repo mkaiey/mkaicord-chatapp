@@ -4,10 +4,10 @@ import { Search } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 
-import {
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
+import { 
+  CommandDialog, 
+  CommandEmpty, 
+  CommandGroup, 
   CommandInput,
   CommandItem,
   CommandList
@@ -44,7 +44,7 @@ export const ServerSearch = ({
     return () => document.removeEventListener("keydown", down)
   }, []);
 
-  const onClick = ({ id, type }: { id: string, type: "channel" | "member" }) => {
+  const onClick = ({ id, type }: { id: string, type: "channel" | "member"}) => {
     setOpen(false);
 
     if (type === "member") {
@@ -85,14 +85,14 @@ export const ServerSearch = ({
 
             return (
               <CommandGroup key={label} heading={label}>
-                {data?.map(({ id, icon, name }) => {
-                  return (
-                    <CommandItem key={id} onSelect={() => onClick({ id, type })}>
-                      {icon}
-                      <span>{name}</span>
-                    </CommandItem>
-                  )
-                })}
+                  {data?.map(({ id, icon, name }) => {
+                    return (
+                      <CommandItem key={id} onSelect={() => onClick({ id, type })}>
+                        {icon}
+                        <span>{name}</span>
+                      </CommandItem>
+                    )
+                  })}
               </CommandGroup>
             )
           })}

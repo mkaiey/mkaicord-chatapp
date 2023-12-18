@@ -4,6 +4,7 @@ import qs from "query-string";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Video, VideoOff } from "lucide-react";
 
+
 import { ActionTooltip } from "@/components/action-tooltip";
 
 export const ChatVideoButton = () => {
@@ -23,7 +24,7 @@ export const ChatVideoButton = () => {
 
     router.push(url);
   }
-
+  
   const Icon = isVideo ? VideoOff : Video;
   const tooltipLabel = isVideo ? "End video call" : "Start video call";
 
